@@ -1,0 +1,104 @@
+{
+  "model": "KNeighborsClassifier",
+  "feature_columns": [
+    "candidate_rank",
+    "distance_m",
+    "heading_difference_deg",
+    "road_length_m",
+    "gps_speed_mps"
+  ],
+  "identifier_columns": [
+    "trip_id",
+    "observation_index",
+    "candidate_arc_id"
+  ],
+  "target_column": "target",
+  "target_definition": "For each GPS observation, among its candidate arcs within the configured search radius that occur in the trip's supplied reference route, target=1 for the nearest such arc and target=0 for the other candidates. Distance ties are broken by first occurrence in the ordered reference route, then by arc ID. An observation with no in-radius reference-route candidate is omitted rather than assigned a false all-negative label. This is a candidate-level proxy label: the route has no per-GPS timestamps, so it does not claim exact timestamp-to-route alignment.",
+  "k_values_tried": [
+    3,
+    5,
+    9
+  ],
+  "selection_metric": "validation top1_accuracy_per_observation",
+  "selected_k": 9,
+  "validation_metrics": {
+    "candidate_accuracy_at_0_5": 0.9537092854287365,
+    "candidate_precision_at_0_5": 0.8099038521963174,
+    "candidate_recall_at_0_5": 0.751136496095116,
+    "candidate_f1_at_0_5": 0.7794139880862387,
+    "top1_accuracy_per_observation": 0.8342464156661615,
+    "positive_candidate_rate": 0.10887677595801791,
+    "candidate_rows": 157591,
+    "candidate_roc_auc": 0.9558257245601356,
+    "candidate_average_precision": 0.8003046637456073
+  },
+  "validation_by_k": {
+    "3": {
+      "candidate_accuracy_at_0_5": 0.9470781960898782,
+      "candidate_precision_at_0_5": 0.7721268979138378,
+      "candidate_recall_at_0_5": 0.7291059564051754,
+      "candidate_f1_at_0_5": 0.75,
+      "top1_accuracy_per_observation": 0.8005595057699032,
+      "positive_candidate_rate": 0.10887677595801791,
+      "candidate_rows": 157591,
+      "candidate_roc_auc": 0.9227599687648489,
+      "candidate_average_precision": 0.7067771405490145
+    },
+    "5": {
+      "candidate_accuracy_at_0_5": 0.950980703212747,
+      "candidate_precision_at_0_5": 0.7936251011641661,
+      "candidate_recall_at_0_5": 0.7429770369506935,
+      "candidate_f1_at_0_5": 0.7674663616387225,
+      "top1_accuracy_per_observation": 0.8186851614407273,
+      "positive_candidate_rate": 0.10887677595801791,
+      "candidate_rows": 157591,
+      "candidate_roc_auc": 0.9430220699346072,
+      "candidate_average_precision": 0.7620668882341597
+    },
+    "9": {
+      "candidate_accuracy_at_0_5": 0.9537092854287365,
+      "candidate_precision_at_0_5": 0.8099038521963174,
+      "candidate_recall_at_0_5": 0.751136496095116,
+      "candidate_f1_at_0_5": 0.7794139880862387,
+      "top1_accuracy_per_observation": 0.8342464156661615,
+      "positive_candidate_rate": 0.10887677595801791,
+      "candidate_rows": 157591,
+      "candidate_roc_auc": 0.9558257245601356,
+      "candidate_average_precision": 0.8003046637456073
+    }
+  },
+  "evaluation_metrics": {
+    "test": {
+      "candidate_accuracy_at_0_5": 0.9558655874137832,
+      "candidate_precision_at_0_5": 0.7845286564359536,
+      "candidate_recall_at_0_5": 0.7443173376912792,
+      "candidate_f1_at_0_5": 0.7638941831211405,
+      "top1_accuracy_per_observation": 0.8129549844005348,
+      "positive_candidate_rate": 0.09592145015105741,
+      "candidate_rows": 140344,
+      "candidate_roc_auc": 0.9458949459112669,
+      "candidate_average_precision": 0.7797110136450704
+    },
+    "student_test_dev": {
+      "candidate_accuracy_at_0_5": 0.9537082555758666,
+      "candidate_precision_at_0_5": 0.7601765030336459,
+      "candidate_recall_at_0_5": 0.7203261380860294,
+      "candidate_f1_at_0_5": 0.7397149987923678,
+      "top1_accuracy_per_observation": 0.7716510740605237,
+      "positive_candidate_rate": 0.09131868708804453,
+      "candidate_rows": 209519,
+      "candidate_roc_auc": 0.9457796433717935,
+      "candidate_average_precision": 0.7565273681884069
+    }
+  },
+  "fit_splits_for_saved_model": [
+    "train",
+    "validation"
+  ],
+  "artifacts": {
+    "model": "artifacts\\knn\\knn_model.joblib",
+    "validation_predictions": "artifacts\\knn\\validation_predictions.csv.gz",
+    "test_predictions": "artifacts\\knn\\test_predictions.csv.gz",
+    "student_test_dev_predictions": "artifacts\\knn\\student_test_dev_predictions.csv.gz"
+  }
+}
