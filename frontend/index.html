@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathSnap | GPS Map Matching</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>PathSnap</h1>
+        <p>Intelligent GPS Map Matching System</p>
+    </header>
+
+    <main>
+        <section class="search-card">
+            <h2>Route Prediction</h2>
+            <p>Enter a trip ID to reconstruct its road-network route.</p>
+
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="tripId"
+                    placeholder="Enter Trip ID (e.g. 00000005)"
+                >
+                <button id="predictBtn" onclick="predictRoute()">
+                    Predict Route
+                </button>
+            </div>
+
+            <p id="status"></p>
+        </section>
+
+        <section id="results" class="results hidden">
+            <h2>Prediction Results</h2>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3 id="gpsCount">-</h3>
+                    <p>GPS Observations</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="predictedCount">-</h3>
+                    <p>Predicted Observations</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="missingCount">-</h3>
+                    <p>Missing Predictions</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3 id="arcCount">-</h3>
+                    <p>Unique Road Arcs</p>
+                </div>
+            </div>
+
+            <div class="route-card">
+                <h3>Reconstructed Route</h3>
+                <p id="routeLength"></p>
+                <div id="routeOutput"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>PathSnap | XGBoost + Hidden Markov Model</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
