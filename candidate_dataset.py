@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import gzip
 import json
 import random
 from collections import Counter
@@ -80,7 +81,8 @@ def build_candidate_dataset(
     dropped_observations: Counter[str] = Counter()
     trip_summary: dict[str, dict] = {}
 
-    with output_path.open("w", newline="", encoding="utf-8") as stream:
+    open_output = gzip.open if output_path.suffix == ".gz" else open
+    with open_output(output_path, "wt", newline="", encoding="utf-8") as stream:
         writer = csv.DictWriter(stream, fieldnames=header)
         writer.writeheader()
         for source_split in ("train", "student_test"):
@@ -140,6 +142,7 @@ def build_candidate_dataset(
     manifest = {
         "dataset_root": str(dataset_root),
         "candidate_csv": str(output_path),
+        "compression": "gzip" if output_path.suffix == ".gz" else "none",
         "search_radius_m": radius_m,
         "random_seed": seed,
         "train_partition_split_method": (
@@ -190,3 +193,5 @@ if __name__ == "__main__":
         args.dataset_root, args.output, args.manifest, args.radius_m, args.seed
     )
     print(json.dumps(result["counts_by_split"], indent=2))
+
+
