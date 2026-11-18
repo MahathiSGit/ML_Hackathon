@@ -1,0 +1,118 @@
+{
+  "artifacts": {
+    "candidate_predictions": "candidate_predictions.csv",
+    "model": "logistic_regression_pipeline.joblib"
+  },
+  "dataset_path": "C:\\Users\\HP\\Downloads\\Student folder\\ML_Hackathon\\derived\\candidate_dataset.csv",
+  "dataset_rows": 2044065,
+  "evaluated_splits": [
+    "train",
+    "validation",
+    "test"
+  ],
+  "feature_columns": [
+    "candidate_rank",
+    "distance_m",
+    "heading_difference_deg",
+    "road_length_m",
+    "gps_speed_mps"
+  ],
+  "fit_split": "train",
+  "metrics_by_split": {
+    "test": {
+      "accuracy": 0.9581243230918315,
+      "average_precision": 0.8397039001902733,
+      "candidate_rows": 140344,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "rows_actual_columns_predicted": [
+          [
+            124370,
+            2512
+          ],
+          [
+            3365,
+            10097
+          ]
+        ]
+      },
+      "f1": 0.774577116336159,
+      "positive_rows": 13462,
+      "precision": 0.8007772226187644,
+      "recall": 0.7500371415837171,
+      "roc_auc": 0.9737400426265784
+    },
+    "train": {
+      "accuracy": 0.944593654477288,
+      "average_precision": 0.7603567722350445,
+      "candidate_rows": 1536611,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "rows_actual_columns_predicted": [
+          [
+            1350082,
+            31286
+          ],
+          [
+            53852,
+            101391
+          ]
+        ]
+      },
+      "f1": 0.7042998055015282,
+      "positive_rows": 155243,
+      "precision": 0.7641942461768053,
+      "recall": 0.653111573468691,
+      "roc_auc": 0.9599632420744857
+    },
+    "validation": {
+      "accuracy": 0.9548832103356156,
+      "average_precision": 0.8356929692440895,
+      "candidate_rows": 157591,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "rows_actual_columns_predicted": [
+          [
+            137712,
+            2721
+          ],
+          [
+            4389,
+            12769
+          ]
+        ]
+      },
+      "f1": 0.7822224944866454,
+      "positive_rows": 17158,
+      "precision": 0.824338282763073,
+      "recall": 0.7442009558223569,
+      "roc_auc": 0.9740240653973159
+    }
+  },
+  "pipeline": [
+    "median_imputer",
+    "standard_scaler",
+    "logistic_regression"
+  ],
+  "prediction_rows_by_split": {
+    "student_test_dev": 209519,
+    "test": 140344,
+    "train": 1536611,
+    "validation": 157591
+  },
+  "trip_counts_by_split": {
+    "student_test_dev": 10,
+    "test": 8,
+    "train": 64,
+    "validation": 8
+  }
+}
