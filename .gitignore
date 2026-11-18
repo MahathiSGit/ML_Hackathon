@@ -1,11 +1,17 @@
+# Virtual environments
 venv/
 .venv/
+
+# Python cache
 __pycache__/
 *.pyc
 
-# Extracted raw dataset
-data/raw/Student folder/
+# Raw datasets
+data/raw/
 
 # Temporary files
 *.tmp
 .DS_Store
+
+# IDE
+.vscode/

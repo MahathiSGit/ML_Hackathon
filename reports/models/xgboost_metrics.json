@@ -1,0 +1,31 @@
+{
+    "model": "XGBoost",
+    "training_time_seconds": 10.75,
+    "training_rows": 1536611,
+    "validation_rows": 157591,
+    "accuracy": 0.9600040611456238,
+    "precision": 0.8366308999565838,
+    "recall": 0.7861638885651008,
+    "f1_score": 0.8106126618791503,
+    "roc_auc": 0.9808178530261923,
+    "pr_auc": 0.8753030526953981,
+    "top1_candidate_accuracy": 0.8628045226716401,
+    "feature_importance": {
+        "candidate_rank": 0.6267498731613159,
+        "heading_difference_deg": 0.15345339477062225,
+        "distance_m": 0.14744825661182404,
+        "gps_speed_mps": 0.03819074109196663,
+        "road_length_m": 0.03415772691369057
+    },
+    "configuration": {
+        "n_estimators": 200,
+        "max_depth": 6,
+        "learning_rate": 0.1,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "tree_method": "hist",
+        "n_jobs": 4,
+        "scale_pos_weight": 1,
+        "random_state": 42
+    }
+}

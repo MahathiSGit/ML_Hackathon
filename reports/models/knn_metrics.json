@@ -1,0 +1,26 @@
+{
+    "model": "K-Nearest Neighbors",
+    "training_rows": 100000,
+    "full_training_rows": 1536611,
+    "validation_rows": 157591,
+    "training_time_seconds": 0.08,
+    "prediction_time_seconds": 1.32,
+    "accuracy": 0.9461200195442633,
+    "precision": 0.7775927230798796,
+    "recall": 0.7074833896724559,
+    "f1_score": 0.7408831517592847,
+    "roc_auc": 0.9353743878024492,
+    "pr_auc": 0.7614512777616387,
+    "top1_candidate_accuracy": 0.8009091968760927,
+    "configuration": {
+        "n_neighbors": 5,
+        "weights": "distance",
+        "algorithm": "kd_tree",
+        "leaf_size": 40,
+        "p": 2,
+        "scaling": "StandardScaler",
+        "sample_size": 100000,
+        "random_state": 42
+    },
+    "feature_importance": null
+}

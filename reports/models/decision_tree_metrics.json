@@ -1,0 +1,28 @@
+{
+    "model": "Decision Tree",
+    "training_time_seconds": 16.48,
+    "training_rows": 1536611,
+    "validation_rows": 157591,
+    "accuracy": 0.9165371118909075,
+    "precision": 0.5729109776078646,
+    "recall": 0.9170649259820491,
+    "f1_score": 0.7052416915043811,
+    "roc_auc": 0.9538836402962434,
+    "pr_auc": 0.810681730162429,
+    "top1_candidate_accuracy": 0.820142207716517,
+    "feature_importance": {
+        "candidate_rank": 0.7952302496552829,
+        "road_length_m": 0.06802862120174268,
+        "heading_difference_deg": 0.06735951561569663,
+        "gps_speed_mps": 0.03558493978922824,
+        "distance_m": 0.03379667373804955
+    },
+    "configuration": {
+        "criterion": "gini",
+        "max_depth": 18,
+        "min_samples_split": 10,
+        "min_samples_leaf": 5,
+        "class_weight": "balanced",
+        "random_state": 42
+    }
+}

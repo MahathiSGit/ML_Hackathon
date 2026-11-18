@@ -1,0 +1,27 @@
+{
+    "model": "Logistic Regression",
+    "training_time_seconds": 1.13,
+    "training_rows": 1536611,
+    "validation_rows": 157591,
+    "accuracy": 0.8620289229714895,
+    "precision": 0.43877360254253134,
+    "recall": 0.9575125305979718,
+    "f1_score": 0.6017838501126354,
+    "roc_auc": 0.9722477270598942,
+    "pr_auc": 0.8218109834001701,
+    "top1_candidate_accuracy": 0.8672922252010724,
+    "feature_coefficients": {
+        "candidate_rank": -6.406531522217798,
+        "distance_m": -1.1729555923006416,
+        "heading_difference_deg": -0.9373044877012778,
+        "gps_speed_mps": -0.21300336955218868,
+        "road_length_m": 0.2007669372884719
+    },
+    "configuration": {
+        "max_iter": 1000,
+        "solver": "lbfgs",
+        "class_weight": "balanced",
+        "scaling": "StandardScaler",
+        "random_state": 42
+    }
+}
