@@ -4,7 +4,7 @@ This project prepares GPS trips and nearby road segments for map matching. The s
 
 ## What is in this repository
 
-- data_loader.py reads each trip's GPS points, road nodes, road arcs, and reference route. It skips malformed or invalid records and keeps the original row IDs.
+- data_loader.py reads each trip's GPS points, road nodes, road arcs, and reference route. It skips malformed or invalid    records and keeps the original row IDs.
 - road_graph.py builds a directed graph from the road arcs and finds nearby road candidates for each GPS point.
 - candidate_dataset.py combines those candidates into one labeled CSV.
 - candidate_dataset_spec.md describes the shared columns, target, and split rules.
