@@ -1,0 +1,11 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Extracted raw dataset
+data/raw/Student folder/
+
+# Temporary files
+*.tmp
+.DS_Store
