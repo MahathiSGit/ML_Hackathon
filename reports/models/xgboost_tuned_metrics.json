@@ -1,0 +1,35 @@
+{
+    "model": "Tuned XGBoost",
+    "optimization_method": "Optuna TPE Bayesian Optimization",
+    "optimization_trials": 20,
+    "optimization_time_seconds": 238.97,
+    "training_time_seconds": 11.08,
+    "training_rows": 1536611,
+    "validation_rows": 157591,
+    "accuracy": 0.9563236479240566,
+    "precision": 0.7670079517696585,
+    "recall": 0.860123557524187,
+    "f1_score": 0.8109013983900657,
+    "roc_auc": 0.9809167771232103,
+    "pr_auc": 0.8746601296663225,
+    "top1_candidate_accuracy": 0.8672339433500408,
+    "feature_importance": {
+        "candidate_rank": 0.5521002411842346,
+        "distance_m": 0.20900531113147736,
+        "heading_difference_deg": 0.18055669963359833,
+        "road_length_m": 0.024845974519848824,
+        "gps_speed_mps": 0.03349174186587334
+    },
+    "configuration": {
+        "n_estimators": 302,
+        "max_depth": 4,
+        "learning_rate": 0.023231731978492907,
+        "subsample": 0.9795542149013333,
+        "colsample_bytree": 0.9862528132298237,
+        "min_child_weight": 9,
+        "gamma": 1.5230688458668533,
+        "reg_alpha": 7.569183361880229e-08,
+        "reg_lambda": 0.8768125777016167,
+        "scale_pos_weight": 1.768335486227123
+    }
+}

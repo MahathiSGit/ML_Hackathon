@@ -1,0 +1,34 @@
+{
+    "model": "Tuned XGBoost",
+    "optimization_method": "Optuna TPE Bayesian Optimization",
+    "optimization_metric": "top1_candidate_accuracy",
+    "number_of_trials": 20,
+    "best_top1_candidate_accuracy": 0.8672339433500408,
+    "optimization_time_seconds": 238.97,
+    "features": [
+        "candidate_rank",
+        "distance_m",
+        "heading_difference_deg",
+        "road_length_m",
+        "gps_speed_mps"
+    ],
+    "hyperparameters": {
+        "n_estimators": 302,
+        "max_depth": 4,
+        "learning_rate": 0.023231731978492907,
+        "subsample": 0.9795542149013333,
+        "colsample_bytree": 0.9862528132298237,
+        "min_child_weight": 9,
+        "gamma": 1.5230688458668533,
+        "reg_alpha": 7.569183361880229e-08,
+        "reg_lambda": 0.8768125777016167,
+        "scale_pos_weight": 1.768335486227123
+    },
+    "fixed_parameters": {
+        "objective": "binary:logistic",
+        "eval_metric": "logloss",
+        "tree_method": "hist",
+        "n_jobs": 4,
+        "random_state": 42
+    }
+}

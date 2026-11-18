@@ -9,6 +9,7 @@ Compare the baseline ML models using their validation performance to select a su
 | Model | Accuracy | Precision | Recall | F1-score | ROC-AUC | PR-AUC | Top-1 Accuracy | Training Time (s) | Training Rows |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Logistic Regression | 86.20% | 43.88% | 95.75% | 60.18% | 97.22% | 82.18% | 86.73% | 1.13 | 1536611 |
+| Tuned XGBoost | 95.63% | 76.70% | 86.01% | 81.09% | 98.09% | 87.47% | 86.72% | 11.08 | 1536611 |
 | XGBoost | 96.00% | 83.66% | 78.62% | 81.06% | 98.08% | 87.53% | 86.28% | 10.75 | 1536611 |
 | Random Forest | 94.03% | 66.47% | 91.16% | 76.88% | 98.00% | 87.21% | 85.52% | 16.02 | 1536611 |
 | Decision Tree | 91.65% | 57.29% | 91.71% | 70.52% | 95.39% | 81.07% | 82.01% | 16.48 | 1536611 |
@@ -21,8 +22,8 @@ Compare the baseline ML models using their validation performance to select a su
 | Accuracy | XGBoost | 96.00% |
 | Precision | XGBoost | 83.66% |
 | Recall | Logistic Regression | 95.75% |
-| F1 Score | XGBoost | 81.06% |
-| Roc Auc | XGBoost | 98.08% |
+| F1 Score | Tuned XGBoost | 81.09% |
+| Roc Auc | Tuned XGBoost | 98.09% |
 | Pr Auc | XGBoost | 87.53% |
 | Top1 Candidate Accuracy | Logistic Regression | 86.73% |
 | Training Time Seconds | K-Nearest Neighbors | 0.08 seconds |
